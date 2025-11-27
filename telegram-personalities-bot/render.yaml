@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telegram-personalities-bot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: "your-token-here"
+      - key: OPENAI_API_KEY
+        value: "your-openai-key-here"
+      - key: BASE_URL
+        value: "https://your-app.onrender.com"
+      - key: ADMIN_IDS
+        value: "761662415"
+      - key: DATABASE_PATH
+        value: "data.db"
